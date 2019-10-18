@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tudou_nav"
+    app:startDestination="@id/tuDouListFragment">
+
+    <fragment
+        android:id="@+id/createTuDouFragment"
+        android:name="com.leagmain.tudou.createtask.CreateTuDouFragment"
+        android:label="CreateTuDouFragment"
+        tools:layout="@layout/fragment_create_tu_dou" />
+    <fragment
+        android:id="@+id/tuDouListFragment"
+        android:name="com.leagmain.tudou.createtask.TuDouListFragment"
+        android:label="TuDouListFragment"
+        tools:layout="@layout/fragment_tu_dou_list">
+        <action
+            android:id="@+id/action_tuDouListFragment_to_createTuDouFragment"
+            app:destination="@id/createTuDouFragment" />
+    </fragment>
+</navigation>
